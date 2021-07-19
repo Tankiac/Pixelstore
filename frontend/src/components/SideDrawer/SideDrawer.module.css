@@ -1,0 +1,44 @@
+.SideDrawer {
+    position: fixed;
+    width: 330px;
+    max-width: 70%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: white;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-out;
+    font-size: 1.2rem;
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
+}
+
+.Logo {
+    height: 11%;
+    margin-bottom: 32px;
+    display: inline-block;
+}
+
+.DrawerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+    background-color: #1F2041;
+    color: white;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.Username {
+    color: #ffb867;
+    display: inline-block;
+}

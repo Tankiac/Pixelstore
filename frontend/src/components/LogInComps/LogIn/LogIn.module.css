@@ -1,0 +1,46 @@
+.LogInForm {
+    width: 300px;
+    height: 246px;
+    margin: 50px auto;
+    border: 1px solid #cccccc;   
+}
+
+.Logo {
+    height: 45px;
+    margin-left: 70px;
+}
+
+.LogoContainer {
+    height: 45px;
+    width: 100%;
+    background-color: #1F2041;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.Input {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.Input:focus {
+    outline: none;
+}
+
+.SubmitBtn {
+    border: none;
+    margin-left: 15px;
+    margin-top: 10px;
+    height: 50px;
+    width: 90%;
+    cursor: pointer;
+    background-color: #ffb45e;
+    font-weight: bold;
+    font-size: 1.1rem;
+}

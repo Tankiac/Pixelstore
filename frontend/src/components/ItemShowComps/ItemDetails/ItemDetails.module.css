@@ -1,0 +1,105 @@
+.ItemDetails {
+    /*box-shadow: 5px 5px 10px #aaaaaa;*/
+    height: 415px;
+    width: 100%;
+    grid-column: 2;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.ItemName {
+    font-weight: bold;
+    font-size: 1.3rem;
+    height: 40px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 20px;
+}
+
+.Quantity {
+    padding-left: 84px;
+    margin-bottom: 5px;
+}
+
+.QtyLabel {
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+.QtyInput {
+    width: 50px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding-left: 9px;
+}
+
+.Price {
+    padding-left: 5px;
+}
+
+.PriceNum {
+    font-weight: bold;
+    font-size: 1.1rem;
+    grid-column: 1;
+}
+
+.BuyItNowBtn {
+    border: none;
+    background-color: #5251a5;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    grid-column: 2;    
+}
+
+.AddToCartBtn {
+    border: none;
+    background-color: #7c7bc7;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    grid-column: 2;
+}
+
+.BuySection {
+    background-color: #ffdcc7;
+    border-radius: 8px;
+    padding-left: 100px;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 110px;
+}
+
+.Shipping {
+    margin-top: 10px;
+    height: 20px;
+    padding-left: 84px;
+    font-size: 0.9rem;
+
+}
+
+.Delivery {
+    margin-top: 10px;
+    height: 40px;
+    padding-left: 90px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #cccccc;
+}
+
+.DeliveryDate {
+    font-weight: bold;
+}
+
+.Description {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}

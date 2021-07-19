@@ -1,0 +1,77 @@
+.TotalCard {
+    width: 100%;
+    border: 1px solid #cccccc;
+    height: 190px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.PriceContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 10px;
+    grid-gap: 4px;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.SubtotalText {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.ShippingText {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.SubtotalPrice {
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    justify-content: right;
+}
+
+.ShippingPrice {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    justify-content: right;
+}
+
+.OrderTotalContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.OrderTotalText {
+    font-weight: bold;
+}
+
+.OrderTotalPrice {
+    display: grid;
+    justify-content: right;
+    font-weight: bold;
+}
+
+.BuyBtn {
+    border: none;
+    margin: 10px;
+    margin-top: 10px;
+    width: 92%;
+    height: 50px;
+    background-color: #ffb867;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.BuyBtn:hover {
+    background-color: #ffb45e;
+}

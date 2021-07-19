@@ -1,0 +1,9 @@
+.ItemShow {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: auto;
+    grid-row-gap: 40px;
+    grid-column-gap: 20px;
+    width: 1100px;
+    margin: 100px auto;
+}

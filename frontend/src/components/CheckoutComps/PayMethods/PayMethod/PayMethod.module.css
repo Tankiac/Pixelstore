@@ -1,0 +1,32 @@
+.PayMethod {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+
+.Checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.CheckboxContainer {
+    grid-column: 1;
+    width: 50px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.ImgContainer {
+    grid-column: 2;
+    display: grid;
+    align-content: center;
+}
+
+.PayMethodImg {
+    height: 25px;
+}

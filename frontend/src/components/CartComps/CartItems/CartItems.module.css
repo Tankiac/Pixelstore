@@ -1,0 +1,12 @@
+.CartItems {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.NoProducts {
+    width: 100%;
+    height: 50px;
+    padding: 12px 10px 10px 20px;
+    border: 1px solid #cccccc;
+    color: #888888;
+}

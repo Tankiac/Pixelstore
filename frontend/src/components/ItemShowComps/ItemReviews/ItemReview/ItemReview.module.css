@@ -1,0 +1,14 @@
+.ItemReview {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.AuthorName {
+    font-size: 0.9rem;
+}
+
+.ReviewTitle {
+    font-weight: bold;
+}
+

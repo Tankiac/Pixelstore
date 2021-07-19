@@ -1,0 +1,17 @@
+.ItemPicture {
+    max-width: 500px;
+    max-height: 500px;
+    grid-column: 1;
+
+}
+
+.ImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.CarouselImg {
+    max-height: 500px;
+    max-width: 500px;
+}

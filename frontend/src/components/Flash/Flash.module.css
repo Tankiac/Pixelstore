@@ -1,0 +1,24 @@
+.Flash {
+    z-index: 9999; 
+    position: fixed; 
+    bottom: 3%; 
+    left: 50%;
+
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 3.5s;
+    animation: slide 0.5s forwards;
+    animation-delay: 3.5s;
+}
+
+@-webkit-keyframes slide {
+    100% { bottom: -100px; }
+}
+
+@keyframes slide {
+    100% { bottom: -100px; }
+}
+
+.FlashText {
+    margin: 0 auto;
+    font-weight: bold;
+}

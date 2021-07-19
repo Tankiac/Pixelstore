@@ -1,0 +1,16 @@
+.CategoryBtn {
+    display: inline-block;
+    color: white;
+    margin-left: 20px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.BtnText {
+    color: white;
+}
+
+.CategoryBtn :hover {
+    color:#ffb45e;
+    text-decoration: none;
+}

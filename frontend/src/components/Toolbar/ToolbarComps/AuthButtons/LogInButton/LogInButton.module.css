@@ -1,0 +1,13 @@
+.LogInButton {
+    width: 65px;
+    height: 40px;
+    font-size: 1rem;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+}
+
+.LogInButton:hover {
+    cursor: pointer;
+}

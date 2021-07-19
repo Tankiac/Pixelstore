@@ -1,0 +1,36 @@
+.SearchBar {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 40%;
+    display: flex;
+    height: 38px;
+}
+
+.SearchBox {
+    margin: 0;
+    padding: 8px 12px;
+    width: 100%;
+    height: 38px;
+    align-items: center;
+    font-size: 1rem;
+
+    border: none;
+    border-bottom-left-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    overflow: auto;
+    outline: none;
+}
+
+.SearchButton {
+    background-color: #ffb867;
+    border: none;
+    width: 80px;
+    cursor: pointer;
+    height: 38px;
+    font-size: 1rem;
+}
+
+.SearchButton:hover {
+    background-color: #ffb45e;
+}

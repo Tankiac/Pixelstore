@@ -1,0 +1,35 @@
+.CartIcon {
+    margin-left: 20px;
+    padding: 2px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.CartIcon img {
+    height: 100%;
+}
+
+.CartNumber {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    margin-right: 20px;
+    margin-top: 10px;
+    display: grid;
+    height: 35px;
+    grid-column: 2;
+}
+
+.CartContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+}

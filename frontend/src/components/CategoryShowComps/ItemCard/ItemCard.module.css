@@ -1,0 +1,32 @@
+.ItemCard {
+    max-width: 250px;
+    min-width: 160px;
+    height: 400px;
+    display: inline-block;
+    padding: 10px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid rgb(211, 210, 210);
+    border-radius: 10px;
+}
+
+.Image {
+    max-height: 75%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.ItemName {
+    color: black;
+    font-weight: bold;
+}
+
+.ItemName:hover {
+    color: black;
+}
+
+.Price {
+    font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.PayMethods {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.PayMethodsTitle {
+    display: grid;
+    align-content: center;
+    padding-left: 10px;
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}

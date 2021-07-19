@@ -1,0 +1,29 @@
+.CtgCard {
+    max-width: 355px;
+    min-width: 320px;
+    height: 450px;
+    display: inline-block;
+    padding: 20px;
+    margin: 0 10px;
+    margin-bottom: 40px;
+    background-color: white;
+    z-index: 90;
+    border: 1px solid #cccccc;
+}
+
+.Title {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: black;
+}
+
+.Image {
+    max-height: 75%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.SeeMore {
+    color: rgb(77, 77, 173);
+    font-size: 0.9rem;
+}

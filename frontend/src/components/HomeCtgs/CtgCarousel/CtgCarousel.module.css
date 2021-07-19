@@ -1,0 +1,20 @@
+.CtgCarousel {
+    max-width: 1500px;
+    max-height: 500px;
+    margin: 0 auto;
+}
+
+.ImgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.CarouselImg {
+    max-height: 500px;
+}
+
+@media (max-width: 1500px) {
+    .SmallScreenSize {
+        max-width: 1000px;
+    }
+}
