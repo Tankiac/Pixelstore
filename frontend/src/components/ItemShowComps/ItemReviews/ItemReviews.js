@@ -90,7 +90,6 @@ const ItemReviews = (props) => {
             <div className={classes.ReviewsTitle}>Reviews</div>
             <div className={classes.ReviewsContainer}>
                 
-                
                 {showReviewContent}
 
             </div>

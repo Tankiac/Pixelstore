@@ -4,7 +4,6 @@ import classes from "./Categories.module.css";
 import CategoryBtn from "./CategoryBtn/CategoryBtn";
 
 const Categories = (props) => {
-
     const categoryData = ["Laptops", "Desktops", "Phones", "Keyboards", "Headsets", "Speakers", "Tablets", "Consoles"]
 
     return (

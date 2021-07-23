@@ -14,7 +14,7 @@ const mainReducer = (state =
         payMethod: "visa", 
         cart: [], 
         sortBy: "",
-        resultBar: { content: "", showing: ""} 
+        resultBar: { content: "", showing: ""}
     }, action ) => {
     switch (action.type) {
         case "flash": return { ...state, flashMessage: action.payload.flashMessage, flashType: action.payload.flashType } || state;

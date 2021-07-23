@@ -1,13 +1,18 @@
-import React from "react"
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import React, { useEffect, useState } from "react"
+import { Link, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 
 import classes from "./CategoryBtn.module.css"
 
 const CategoryBtn = (props) => {
+    const [btnTextClass, setBtnTextClass] = useState([classes.BtnText])
+
     const dispatch = useDispatch();
 
+    let { categoryid } = useParams();
+
     const onClickCategory = () => {
+        console.log(props.selected)
         dispatch({
             type: "setSortBy",
             payload: {
@@ -24,11 +29,20 @@ const CategoryBtn = (props) => {
             }
         })
     }
+    
+    useEffect(() => {
+        if (props.name.toLowerCase() === categoryid) {
+            setBtnTextClass(classes.Selected);
+        } else if (props.name.toLowerCase() !== categoryid) {
+            setBtnTextClass(classes.BtnText);
+        }
 
+    }, [categoryid])
+    
     return (
         <div className={classes.CategoryBtn}>
             <Link 
-                className={classes.BtnText} 
+                className={btnTextClass} 
                 to={`/categoryshow/${props.name.toLowerCase()}`}
                 onClick={onClickCategory}
                 >{props.name}

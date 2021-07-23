@@ -18,31 +18,38 @@ function App() {
 
   return (
       <React.Fragment>
-          <Toolbar/>
+          
           <SideDrawer
               open={sideDrawerCtx.showSideDrawer}
               closed={sideDrawerCtx.onSideDrawerClosed} />
           <main className={classes.Content}>
             <Switch>
                 <Route path="/categoryshow/:categoryid">
+                    <Toolbar/>
                     <CategoryShow/>
                 </Route>
                 <Route path="/itemshow/:productid">
+                    <Toolbar/>
                     <ItemShow/>
                 </Route>
                 <Route path="/login">
+                    <Toolbar/>
                     <LogInPage/>
                 </Route>
                 <Route path="/signin">
+                    <Toolbar/>
                     <SignInPage/>
                 </Route>
                 <Route path="/cart">
+                    <Toolbar/>
                     <CartPage/>
                 </Route>
                 <Route path="/checkout">
+                    <Toolbar/>
                     <CheckoutPage/>
                 </Route>
                 <Route path="/">
+                    <Toolbar/>
                     <HomePage/>
                 </Route>
             </Switch>

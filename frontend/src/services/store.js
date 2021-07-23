@@ -2,6 +2,7 @@ import http from "../http-common";
 
 export default class StoreDataService {
     static async getProductsByCategory(category = "laptops", sortBy = "") {
+        console.log(`getProductsByCategory called, category: ${category}`)
         if (sortBy) {
             return http.get(`/products/category/${category}/${sortBy}`);
         } else if (sortBy === "") {
