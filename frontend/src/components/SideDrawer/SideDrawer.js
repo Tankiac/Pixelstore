@@ -14,14 +14,14 @@ const SideDrawer = ( props ) => {
         e.stopPropagation();
         let drawerItems = 
         <>
-            <DrawerItem name="Laptops" linkpath="/categoryshow/laptops"/>
-            <DrawerItem name="Desktops" linkpath="/categoryshow/desktops"/>
-            <DrawerItem name="Phones" linkpath="/categoryshow/phones"/>
-            <DrawerItem name="Keyboards" linkpath="/categoryshow/keyboards"/>
-            <DrawerItem name="Headsets" linkpath="/categoryshow/headsets"/>
-            <DrawerItem name="Speakers" linkpath="/categoryshow/speakers"/>
-            <DrawerItem name="Hardware" linkpath="/categoryshow/hardware"/>
-            <DrawerItem name="Cables" linkpath="/categoryshow/cables"/>
+            <DrawerItem name="Laptops" linkpath="/categoryshow/laptops" isCtgBtn/>
+            <DrawerItem name="Desktops" linkpath="/categoryshow/desktops" isCtgBtn/>
+            <DrawerItem name="Phones" linkpath="/categoryshow/phones" isCtgBtn/>
+            <DrawerItem name="Keyboards" linkpath="/categoryshow/keyboards" isCtgBtn/>
+            <DrawerItem name="Headsets" linkpath="/categoryshow/headsets" isCtgBtn/>
+            <DrawerItem name="Speakers" linkpath="/categoryshow/speakers" isCtgBtn/>
+            <DrawerItem name="Tablets" linkpath="/categoryshow/tablets" isCtgBtn/>
+            <DrawerItem name="Consoles" linkpath="/categoryshow/consoles" isCtgBtn/>
         </>
         if (categories) {
             setCategories(null);

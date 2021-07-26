@@ -13,6 +13,10 @@ const SignIn = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    const usernameRegex = /^[a-zA-Z0-9]{1,20}$/
+    const passwordRegex = /^[\w~@#$%^&*+=`|{}:;!.?\()\[\]-]{8,40}$/
+
     const dispatch = useDispatch();
 
     const onChangeUsername = e => {
@@ -28,7 +32,7 @@ const SignIn = (props) => {
     }
 
     const registerUser = () => {
-        if (password.length >= 8 && username && email) {
+        if (passwordRegex.exec(password) && usernameRegex.exec(username) && emailRegex.exec(email)) {
         StoreDataService.register({
                 username: username, 
                 email: email, 
@@ -43,11 +47,36 @@ const SignIn = (props) => {
                         flashType: res.data.flashType
                     }
                 })
-        })} else {
+        })} else if (password.length < 8) {
             dispatch({
                 type: "flash",
                 payload: {
                     flashMessage: "Password must be at least 8 characters",
+                    flashType: "error"
+                }
+            }) 
+        } else if (!passwordRegex.exec(password)) {
+            dispatch({
+                type: "flash",
+                payload: {
+                    flashMessage: "Please enter a valid password",
+                    flashType: "error"
+                }
+            }) 
+        }
+        else if (!usernameRegex.exec(username)) {
+            dispatch({
+                type: "flash",
+                payload: {
+                    flashMessage: "Please enter a valid username",
+                    flashType: "error"
+                }
+            })
+        } else if (!emailRegex.exec(email)) {
+            dispatch({
+                type: "flash",
+                payload: {
+                    flashMessage: "Please enter a valid email",
                     flashType: "error"
                 }
             })

@@ -1,9 +1,10 @@
 .CheckoutPage {
     display: grid;
     width: 850px;
-    height: 100%;
+    min-height: 85vh;
     grid-template-columns: 4fr 2fr;
-    grid-template-rows: auto;
+    grid-template-rows: 200px auto;
     margin: 50px auto;
     grid-column-gap: 20px;
+    grid-row-gap: 20px;
 }

@@ -1,7 +1,7 @@
 .CartPage {
     display: grid;
     width: 850px;
-    height: 100%;
+    min-height: 85vh;
     grid-template-columns: 4fr 2fr;
     grid-template-rows: auto;
     margin: 50px auto;

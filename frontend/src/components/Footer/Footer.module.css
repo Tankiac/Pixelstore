@@ -1,0 +1,58 @@
+.Footer {
+    height: 330px;
+    width: 100%;
+    background-color: #1F2041;
+    border-top: 10px solid #3c3d5e;
+}
+
+.FooterItems {
+    grid-template-rows: 100px 50px 50px 50px 50px;
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 200px;
+}
+
+.LogoContainer {
+    grid-row: 1;
+}
+
+.FooterButton {
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100px;
+}
+
+.About {
+    grid-row: 2;
+    margin-left: 30px;
+}
+
+.Contact {
+    grid-row: 3;
+    margin-top: 3px;
+    margin-left: 30px;
+}
+
+.Email {
+    margin-left: 50px;
+    margin-top: 8px;
+    grid-row: 4;
+    color: #fff;
+}
+
+.LinkedIn {
+    grid-row: 5;
+    cursor: pointer;
+}
+
+.LinkedInIcon {
+    height: 50px;
+}
+
+.LinkedInText {
+    color: #fff;
+    margin-left: 50px;
+}
+
+
