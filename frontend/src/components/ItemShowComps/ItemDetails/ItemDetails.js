@@ -29,8 +29,16 @@ const ItemDetails = (props) => {
         return time;
       }
 
-    const onAddToCart = () => {
-        if (quantity > props.productData.stock && token !== "") {
+    const onAddToCart = (isBuyItNow) => {
+        if (quantity <= 0) {
+            dispatch({
+                type: "flash",
+                payload: {
+                    flashMessage: `Please enter a quantity greater than 0`,
+                    flashType: "error" 
+                }
+            })
+        } else if (quantity > props.productData.stock && token !== "") {
             dispatch({
                 type: "flash",
                 payload: {
@@ -47,6 +55,9 @@ const ItemDetails = (props) => {
                 }
             })
         } else if (quantity <= props.productData.stock && token !== "") {
+            if (isBuyItNow) {
+                onSetRedirect();
+            }
             dispatch({
                 type: "flash",
                 payload: {
@@ -71,13 +82,13 @@ const ItemDetails = (props) => {
             <div className={classes.ItemName}>{props.productData.name}</div>
                 <div className={classes.Quantity}>
                     <label className={classes.QtyLabel} htmlFor="qty">Quantity:</label>
-                    <input className={classes.QtyInput} type="number" defaultValue={1} id="qty" onChange={onQtyChange}/>
+                    <input className={classes.QtyInput} type="number" min="0" defaultValue={1} id="qty" onChange={onQtyChange}/>
                 </div>
                 <div className={classes.BuySection}>
                     <div className={classes.Price}>
                         Price: <span className={classes.PriceNum}>${props.productData.price}</span>
                     </div>
-                    <button className={classes.BuyItNowBtn} onClick={() => {onAddToCart(); onSetRedirect();}}>Buy It Now</button>
+                    <button className={classes.BuyItNowBtn} onClick={() => {onAddToCart(true)}}>Buy It Now</button>
                     <button className={classes.AddToCartBtn} onClick={onAddToCart}>Add to Cart</button>
                 </div>
                 <div className={classes.Shipping}>
