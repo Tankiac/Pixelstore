@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import classes from "./Categories.module.css";
 import CategoryBtn from "./CategoryBtn/CategoryBtn";
@@ -6,12 +6,27 @@ import CategoryBtn from "./CategoryBtn/CategoryBtn";
 const Categories = (props) => {
     const categoryData = ["Laptops", "Desktops", "Phones", "Keyboards", "Headsets", "Speakers", "Tablets", "Consoles"]
 
+    const [isSmallScreen, setSmallScreen] = useState(window.innerWidth < 800);
+
+    const updateMedia = () => {
+      setSmallScreen(window.innerWidth < 800);
+    };
+  
+    useEffect(() => {
+      window.addEventListener("resize", updateMedia);
+      return () => window.removeEventListener("resize", updateMedia);
+    });
+
     return (
+       
         <div className={classes.Categories}>
-            {categoryData.map((category, index) => {
+            { !isSmallScreen ? (
+            categoryData.map((category, index) => {
                 return <CategoryBtn name={category} key={index}></CategoryBtn>
-            })}
-        </div>
+            })
+            )
+            :  null }
+        </div> 
     )
 }
 
