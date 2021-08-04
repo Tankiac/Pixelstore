@@ -14,7 +14,8 @@ const mainReducer = (state =
         payMethod: "visa", 
         cart: [], 
         sortBy: "",
-        resultBar: { content: "", showing: ""}
+        resultBar: { content: "", showing: ""},
+        isSmallScreen: false
     }, action ) => {
     switch (action.type) {
         case "flash": return { ...state, flashMessage: action.payload.flashMessage, flashType: action.payload.flashType } || state;
@@ -25,6 +26,7 @@ const mainReducer = (state =
         case "setSortBy": return { ...state, sortBy: action.payload.sortBy } || state;
         case "setSearchQuery": return { ...state, searchQuery: action.payload.searchQuery } || state;
         case "setResultBar": return { ...state, resultBar: action.payload.resultBar } || state;
+        case "setSmallScreen": return { ...state, isSmallScreen: action.payload.isSmallScreen } || state;
         default: return state;
     }
 };

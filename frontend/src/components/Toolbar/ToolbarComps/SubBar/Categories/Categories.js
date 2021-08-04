@@ -6,16 +6,7 @@ import CategoryBtn from "./CategoryBtn/CategoryBtn";
 const Categories = (props) => {
     const categoryData = ["Laptops", "Desktops", "Phones", "Keyboards", "Headsets", "Speakers", "Tablets", "Consoles"]
 
-    const [isSmallScreen, setSmallScreen] = useState(window.innerWidth < 800);
-
-    const updateMedia = () => {
-      setSmallScreen(window.innerWidth < 800);
-    };
-  
-    useEffect(() => {
-      window.addEventListener("resize", updateMedia);
-      return () => window.removeEventListener("resize", updateMedia);
-    });
+    const isSmallScreen = false;
 
     return (
        
