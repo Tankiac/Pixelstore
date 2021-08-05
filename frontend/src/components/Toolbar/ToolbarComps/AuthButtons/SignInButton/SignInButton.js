@@ -6,7 +6,7 @@ import classes from "./SignInButton.module.css";
 const SignInButton = (props) => {
     return (
         <Link to="/signin">
-            <button className={classes.SignInButton}>Sign In</button>
+            <button className={classes.SignInButton}>Sign Up</button>
         </Link>
     )
 }

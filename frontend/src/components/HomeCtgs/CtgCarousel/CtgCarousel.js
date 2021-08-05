@@ -28,11 +28,11 @@ const CtgCarousel = (props) => {
           items: 3
         },
         tablet: {
-          breakpoint: { max: 1500, min: 464 },
+          breakpoint: { max: 1500, min: 900 },
           items: 2
         },
         mobile: {
-          breakpoint: { max: 464, min: 0 },
+          breakpoint: { max: 900, min: 0 },
           items: 1
         }
       };

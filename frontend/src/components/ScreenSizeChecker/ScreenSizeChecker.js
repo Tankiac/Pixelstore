@@ -14,8 +14,9 @@ const ScreenSizeChecker = (props) => {
     };
 
     useEffect(() => {
-    window.addEventListener("resize", () => {updateMedia(window.innerWidth < 800)});
-    return () => window.removeEventListener("resize", () => {updateMedia(window.innerWidth < 800)});
+        if (window.innerWidth < 900) {updateMedia(window.innerWidth < 900)};
+        window.addEventListener("resize", () => {updateMedia(window.innerWidth < 900)});
+        return () => window.removeEventListener("resize", () => {updateMedia(window.innerWidth < 900)});
     });
 
     return null;

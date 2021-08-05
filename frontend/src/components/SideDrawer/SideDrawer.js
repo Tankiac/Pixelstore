@@ -38,10 +38,12 @@ const SideDrawer = ( props ) => {
         <React.Fragment>
             <Backdrop show={props.open} clicked={props.closed}/>
             <div className={attachedClasses.join(' ')} onClick={props.closed}>
-                <div className={classes.DrawerHeader}>Hello, <span className={classes.Username}>&nbsp;{username ? username : "User"}</span></div>
+                <div className={classes.DrawerHeader}>Hello, <span className={classes.Username}>&nbsp;{username ? username : "Guest"}</span></div>
                 <nav>
                     <DrawerItem name="Cart" linkpath="/cart"/>
                     <DrawerItem name="Checkout" linkpath="/checkout"/> 
+                    <DrawerItem name="Sign up" linkpath="/signin"/>
+                    <DrawerItem name="Log in" linkpath="/login"/>
                     <DrawerItem name="Categories" linkpath="" showCategories={onShowCategories}/>
                     {categories}
                 </nav>

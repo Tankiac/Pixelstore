@@ -5,6 +5,11 @@
     border-radius: 5px;
 }
 
-.Logo img {
+.LogoImgLarge {
     height: 100%;
+}
+
+.LogoImgSmall {
+    height: 75%;
+    margin-top: 5px;
 }
