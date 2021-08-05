@@ -1,10 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router";
 
 import classes from "./SearchBar.module.css";
 
 const SearchBar = () => {
+    const screenSize = useSelector(state => state.screenSize)
+
     const [searchQuery, setSearchQuery] = useState("");
     const [redirect, setRedirect] = useState(null);
 
@@ -63,7 +65,7 @@ const SearchBar = () => {
     }, [])
 
     return (
-        <div className={classes.SearchBar}>
+        <div className={screenSize !== "extraSmall" ? classes.SearchBar : classes.SearchBarExtraSmall}>
                 <input 
                     className={classes.SearchBox} 
                     ref={searchInput} 

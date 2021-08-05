@@ -4,21 +4,43 @@ import { useDispatch } from "react-redux";
 const ScreenSizeChecker = (props) => {
     const dispatch = useDispatch();
 
-    const updateMedia = (isSmallScreen) => {
+    const updateScreenSize = (screenSize) => {
         dispatch({
-            type: "setSmallScreen",
+            type: "setScreenSize",
             payload: {
-                isSmallScreen: isSmallScreen
+                screenSize: screenSize
             }
         })
     };
 
     useEffect(() => {
-        if (window.innerWidth < 900) {updateMedia(window.innerWidth < 900)};
-        window.addEventListener("resize", () => {updateMedia(window.innerWidth < 900)});
-        return () => window.removeEventListener("resize", () => {updateMedia(window.innerWidth < 900)});
+        if (window.innerWidth < 900 && window.innerWidth > 450) 
+        {
+            updateScreenSize("small")
+        } else if (window.innerWidth < 450) {
+            updateScreenSize("extraSmall")
+        }
+        window.addEventListener("resize", () => {
+            if (window.innerWidth < 900 && window.innerWidth > 450) 
+        {
+            updateScreenSize("small")
+        } else if (window.innerWidth < 450) {
+            updateScreenSize("extraSmall")
+        } else if (window.innerWidth > 900) {
+            updateScreenSize("large")
+        }
+        });
+        return () => window.removeEventListener("resize", () => {
+            if (window.innerWidth < 900 && window.innerWidth > 450) 
+        {
+            updateScreenSize("small")
+        } else if (window.innerWidth < 450) {
+            updateScreenSize("extraSmall")
+        } else if (window.innerWidth > 900) {
+            updateScreenSize("large")
+        }
+        });
     });
-
     return null;
 }
 

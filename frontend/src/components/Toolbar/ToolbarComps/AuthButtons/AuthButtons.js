@@ -7,9 +7,9 @@ import LogInButton from "./LogInButton/LogInButton";
 import LogOutButton from "./LogOutButton/LogOutButton";
 
 const AuthButtons = ( props ) => {
-    const isSmallScreen = useSelector(state => state.isSmallScreen)
+    const screenSize = useSelector(state => state.screenSize)
 
-    if (!isSmallScreen) {
+    if (screenSize === "large") {
         if (props.loggedIn) {
             return (
                 <div className={classes.AuthButtons}>

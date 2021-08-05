@@ -13,6 +13,10 @@
     max-height: 500px;
 }
 
+.CarouselImgExtraSmall {
+    max-height: 350px;
+}
+
 @media (max-width: 1500px) {
     .SmallScreenSize {
         max-width: 1000px;

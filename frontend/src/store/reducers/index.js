@@ -15,7 +15,7 @@ const mainReducer = (state =
         cart: [], 
         sortBy: "",
         resultBar: { content: "", showing: ""},
-        isSmallScreen: false
+        screenSize: "large"
     }, action ) => {
     switch (action.type) {
         case "flash": return { ...state, flashMessage: action.payload.flashMessage, flashType: action.payload.flashType } || state;
@@ -26,7 +26,7 @@ const mainReducer = (state =
         case "setSortBy": return { ...state, sortBy: action.payload.sortBy } || state;
         case "setSearchQuery": return { ...state, searchQuery: action.payload.searchQuery } || state;
         case "setResultBar": return { ...state, resultBar: action.payload.resultBar } || state;
-        case "setSmallScreen": return { ...state, isSmallScreen: action.payload.isSmallScreen } || state;
+        case "setScreenSize": return { ...state, screenSize: action.payload.screenSize } || state;
         default: return state;
     }
 };

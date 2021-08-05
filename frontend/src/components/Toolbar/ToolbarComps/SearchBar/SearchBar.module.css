@@ -7,6 +7,11 @@
     height: 38px;
 }
 
+.SearchBarExtraSmall {
+    height: 38px;
+    display: flex;
+}
+
 .SearchBox {
     margin: 0;
     padding: 8px 12px;
