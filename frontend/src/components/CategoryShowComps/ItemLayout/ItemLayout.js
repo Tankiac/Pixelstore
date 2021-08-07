@@ -10,7 +10,8 @@ const ItemLayout = (props) => {
     const [productData, setProductData] = useState([]);
     const [notFoundMsg, setNotFoundMsg] = useState("");
     const sortBy = useSelector(state => state.sortBy);
-    const searchQuery = useSelector(state => state.searchQuery)
+    const searchQuery = useSelector(state => state.searchQuery);
+    const screenSize = useSelector(state => state.screenSize);
 
     const dispatch = useDispatch();
 
@@ -67,7 +68,10 @@ const ItemLayout = (props) => {
     }, [sortBy]);
 
     return (
-        <div className={classes.ItemLayout}>
+        <div 
+            className=
+                {screenSize === "large" ? classes.ItemLayout : 
+                `${classes.ItemLayout} ${classes.ItemLayoutSmall}`}>
             {productData.map((product, index) => {
                 return <ItemCard 
                     name={product.name} 

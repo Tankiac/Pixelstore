@@ -14,12 +14,14 @@ const ScreenSizeChecker = (props) => {
     };
 
     useEffect(() => {
-        if (window.innerWidth < 900 && window.innerWidth > 450) 
+        setTimeout(() => {
+            if (window.innerWidth < 900 && window.innerWidth > 450) // setTimeout because window.innerWidth returns wrong value without it
         {
             updateScreenSize("small")
         } else if (window.innerWidth < 450) {
             updateScreenSize("extraSmall")
         }
+        }, 1);
         window.addEventListener("resize", () => {
             if (window.innerWidth < 900 && window.innerWidth > 450) 
         {
