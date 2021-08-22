@@ -8,7 +8,7 @@ const ItemDetails = (props) => {
     const [quantity, setQuantity] = useState(1);
     const [redirect, setRedirect] = useState("");
 
-    const token = useSelector(state => state.user.token);
+    const user = useSelector(state => state.user);
 
     const dispatch = useDispatch();
 
@@ -69,7 +69,7 @@ const ItemDetails = (props) => {
                     flashType: "error" 
                 }
             })
-        } else if (quantity > props.productData.stock && token !== "") {
+        } else if (quantity > props.productData.stock && user.token) {
             dispatch({
                 type: "flash",
                 payload: {
@@ -77,7 +77,7 @@ const ItemDetails = (props) => {
                     flashType: "error" 
                 }
             })
-        } else if (token === "") {
+        } else if (!user.token) {
             dispatch({
                 type: "flash",
                 payload: {
@@ -85,7 +85,7 @@ const ItemDetails = (props) => {
                     flashType: "error"
                 }
             })
-        } else if (quantity <= props.productData.stock && token !== "") {
+        } else if (quantity <= props.productData.stock && user.token) {
             if (isBuyItNow) {
                 onSetRedirect();
             }
