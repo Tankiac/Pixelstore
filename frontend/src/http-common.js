@@ -2,7 +2,7 @@ import axios from "axios";
 
 const setBaseURL = () => {
     if (process.env.NODE_ENV === "production") {
-        return "https://salty-eyrie-09068.herokuapp.com/"
+        return "https://pixelstore-loads-slowly.herokuapp.com/"
     } else if (process.env.NODE_ENV !== "production") {
         return "http://localhost:5000/"
     }
