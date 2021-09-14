@@ -13,7 +13,7 @@ const Logo = (props) => {
                 <img src={pxlLogo} 
                 className=
                     {screenSize === "small" ? classes.LogoImgSmall : 
-                    screenSize === "large" ? classes.LogoImgLarge :
+                    screenSize === "large" || screenSize === "medium" ? classes.LogoImgLarge :
                     classes.LogoImgExtraSmall} 
                 alt="Pixel" />
             </Link> 

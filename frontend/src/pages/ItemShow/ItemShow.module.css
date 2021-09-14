@@ -4,6 +4,22 @@
     grid-template-rows: auto;
     grid-row-gap: 40px;
     grid-column-gap: 20px;
-    width: 1100px;
+    max-width: 1100px;
     margin: 100px auto;
+}
+
+.ItemShowLarge {
+
+}
+
+.ItemShowMedium {
+
+}
+
+.ItemShowSmall {
+
+}
+
+.ItemShowExtraSmall {
+    
 }

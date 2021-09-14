@@ -2,7 +2,7 @@ import React, { Component, useContext } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import classes from "./App.module.css";
-import ScreenSizeChecker from "./components/ScreenSizeChecker/ScreenSizeChecker";
+import ScreenSizeProvider from "./components/ScreenSizeProvider/ScreenSizeProvider";
 import Toolbar from "./components/Toolbar/Toolbar";
 import Footer from "./components/Footer/Footer";
 import SideDrawerContext from "./store/sidedrawer-context/sidedrawer-context";
@@ -20,7 +20,7 @@ function App() {
 
   return (
       <React.Fragment>
-          <ScreenSizeChecker/>
+          <ScreenSizeProvider/>
           <SideDrawer
               open={sideDrawerCtx.showSideDrawer}
               closed={sideDrawerCtx.onSideDrawerClosed} />

@@ -7,15 +7,19 @@ import cartIconPng from "../../../../assets/images/CartIcon.png";
 
 const CartIcon = (props) => {
     const cartData = useSelector(state => state.cart)
+    const screenSize = useSelector(state => state.screenSize)
 
-    return (
+    if (screenSize !== "extraSmall") { 
+        return (
             <Link to="/cart" className={classes.CartContainer}>
                 <div className={classes.CartIcon}>
                     <img src={cartIconPng}></img>
                 </div>
                 <div className={classes.CartNumber}>{cartData.length}</div>
             </Link>
-    )
+    )} else { 
+        return null 
+    }
 }
 
 export default CartIcon;

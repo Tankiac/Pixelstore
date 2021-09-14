@@ -11,7 +11,7 @@ const Categories = (props) => {
     return (
        
         <div className={classes.Categories}>
-            { screenSize === "large" ? (
+            { screenSize === "large" || screenSize === "medium" ? (
             categoryData.map((category, index) => {
                 return <CategoryBtn name={category} key={index}></CategoryBtn>
             })

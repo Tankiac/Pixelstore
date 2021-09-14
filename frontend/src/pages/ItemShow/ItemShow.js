@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import Flash from "../../components/Flash/Flash";
 import ItemPicture from "../../components/ItemShowComps/ItemPicture/ItemPicture";
@@ -9,6 +10,7 @@ import StoreDataService from "../../services/store";
 import classes from "./ItemShow.module.css";
 
 const ItemShow = (props) => {
+    const screenSize = useSelector(state => state.screenSize);
     const [productData, setProductData] = useState(null);
 
     let { productid } = useParams();
@@ -29,7 +31,13 @@ const ItemShow = (props) => {
     }, [productid]);
 
     return productData && (
-        <div className={classes.ItemShow}>
+        <div className={
+                `${classes.ItemShow} ${screenSize === "large" ? classes.ItemShowLarge :
+                screenSize === "medium" ? classes.ItemShowMedium : 
+                screenSize === "small" ? classes.ItemShowSmall : 
+                screenSize === "extraSmall" ? classes.ItemShowExtraSmall : 
+                null}`
+            }>
             <ItemPicture pictures={productData.pictures}/>
             <ItemDetails productData={productData}/>
             <ItemReviews reviews={productData.reviews} productid={productData._id} getProduct={getProduct}/> 

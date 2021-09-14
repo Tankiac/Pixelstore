@@ -1,7 +1,5 @@
 .CtgCard {
-    max-width: 355px;
-    min-width: 320px;
-    height: 450px;
+    max-width: 355px; 
     display: inline-block;
     padding: 20px;
     margin: 0 10px;
