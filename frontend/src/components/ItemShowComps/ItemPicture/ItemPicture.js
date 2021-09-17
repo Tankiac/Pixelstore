@@ -1,10 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import classes from "./ItemPicture.module.css";
 
 const ItemPicture = (props) => {
+    const screenSize = useSelector(state => state.screenSize)
+
     const showOneItem = {
         oneItem: {
           breakpoint: { max: 10000, min: 0 },
@@ -13,7 +16,13 @@ const ItemPicture = (props) => {
       };
 
     return (
-        <div className={classes.ItemPicture}>
+        <div className={
+            `${classes.ItemPicture} ${screenSize === "large" ? classes.ItemPictureLarge :
+            screenSize === "medium" ? classes.ItemPictureMedium : 
+            screenSize === "small" ? classes.ItemPictureSmall : 
+            screenSize === "extraSmall" ? classes.ItemPictureExtraSmall : 
+            null}`
+        }>
             <Carousel
                 swipeable={false}
                 draggable={false}

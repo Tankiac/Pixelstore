@@ -13,6 +13,7 @@ const ItemReviews = (props) => {
     const [showReviewContent, setShowReviewContent] = useState([]);
 
     const token = useSelector(state => state.user.token)
+    const screenSize = useSelector(state => state.screenSize)
 
     const dispatch = useDispatch();
 
@@ -86,19 +87,36 @@ const ItemReviews = (props) => {
     }, [reviewList])
 
     return (
-        <div className={classes.ItemReviews}>
+        <div className={
+            `${classes.ItemReviews} ${screenSize === "large" ? classes.ItemReviewsLarge :
+            screenSize === "medium" ? classes.ItemReviewsMedium : 
+            screenSize === "small" ? classes.ItemReviewsSmall : 
+            screenSize === "extraSmall" ? classes.ItemReviewsExtraSmall : 
+            null}`
+        }>
             <div className={classes.ReviewsTitle}>Reviews</div>
             <div className={classes.ReviewsContainer}>
                 
                 {showReviewContent}
 
             </div>
-            <div className={classes.NewReview}>
+            <div className={
+                `${classes.NewReview} ${screenSize === "large" ? classes.NewReviewLarge :
+                screenSize === "medium" ? classes.NewReviewMedium : 
+                screenSize === "small" ? classes.NewReviewSmall : 
+                screenSize === "extraSmall" ? classes.NewReviewExtraSmall : 
+                null}`
+            }>
                 <div className={classes.LeaveReview}>Leave a Review</div>
-                <div>
 
                     <label className={classes.TitleLabel} htmlFor="title">Title</label>
-                    <input className={classes.NewReviewTitle} id="title" type="text" onChange={onChangeReviewTitle}/>
+                    <input className={
+                        `${classes.NewReviewTitle} ${screenSize === "large" ? classes.NewReviewTitleLarge :
+                        screenSize === "medium" ? classes.NewReviewTitleMedium : 
+                        screenSize === "small" ? classes.NewReviewTitleSmall : 
+                        screenSize === "extraSmall" ? classes.NewReviewTitleExtraSmall : 
+                        null}`
+                    } id="title" type="text" onChange={onChangeReviewTitle}/>
 
                     <label className={classes.RatingLabel} htmlFor="rating">Rating</label>
                     <select className={classes.Rating} id="rating" onChange={onChangeReviewRating}>
@@ -110,12 +128,17 @@ const ItemReviews = (props) => {
                     </select>
 
                     <label className={classes.TextLabel} htmlFor="text">Review</label>
-                    <textarea className={classes.NewReviewBox} id="text" onChange={onChangeReviewText}/>
+                    <textarea className={
+                        `${classes.NewReviewBox} ${screenSize === "large" ? classes.NewReviewBoxLarge :
+                        screenSize === "medium" ? classes.NewReviewBoxMedium : 
+                        screenSize === "small" ? classes.NewReviewBoxSmall : 
+                        screenSize === "extraSmall" ? classes.NewReviewBoxExtraSmall : 
+                        null}`
+                    } id="text" onChange={onChangeReviewText}/>
 
                     <button className={classes.NewReviewBtn} 
                     onClick={() => {createReview()}}
                     >Post</button>
-                </div>
             </div>
         </div>
     )

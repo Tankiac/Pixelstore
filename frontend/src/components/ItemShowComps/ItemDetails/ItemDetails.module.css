@@ -2,9 +2,25 @@
     /*box-shadow: 5px 5px 10px #aaaaaa;*/
     height: 415px;
     width: 100%;
-    grid-column: 2;
+    
     background-color: #ffffff;
     padding: 20px;
+}
+
+.ItemDetailsLarge {
+    grid-column: 2;
+}
+
+.ItemDetailsMedium {
+    grid-column: 1;
+}
+
+.ItemDetailsSmall {
+    grid-column: 1;
+}
+
+.ItemDetailsExtraSmall {
+    grid-column: 1;
 }
 
 .ItemName {
@@ -49,10 +65,32 @@
     font-weight: bold;
     font-size: 1.1rem;
     border-radius: 5px;
-    height: 40px;
-    width: 120px;
     cursor: pointer;
     grid-column: 2;    
+}
+
+.BuyItNowBtnLarge {
+    height: 40px;
+    width: 120px;
+    font-size: 1.1rem;
+}
+
+.BuyItNowBtnMedium {
+    height: 40px;
+    width: 120px;
+    font-size: 1.1rem;
+}
+
+.BuyItNowBtnSmall {
+    height: 40px;
+    width: 120px;
+    font-size: 1.1rem;
+}
+
+.BuyItNowBtnExtraSmall {
+    height: 37px;
+    width: 100px;
+    font-size: 1rem;
 }
 
 .AddToCartBtn {
@@ -60,7 +98,7 @@
     background-color: #7c7bc7;
     color: white;
     font-weight: bold;
-    font-size: 1.1rem;
+    
     border-radius: 5px;
     height: 40px;
     width: 120px;
@@ -68,22 +106,75 @@
     grid-column: 2;
 }
 
+.AddToCartBtnLarge {
+    height: 40px;
+    width: 120px;
+    font-size: 1.1rem;
+}
+
+.AddToCartBtnMedium {
+    height: 40px;
+    width: 120px;
+    font-size: 1.1rem;
+}
+
+.AddToCartBtnSmall {
+    height: 40px;
+    width: 120px;
+    font-size: 1.1rem;
+}
+
+.AddToCartBtnExtraSmall {
+    height: 37px;
+    width: 100px;
+    font-size: 1rem;
+}
+
 .BuySection {
     background-color: #ffdcc7;
     border-radius: 8px;
-    padding-left: 100px;
     padding-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 110px;
 }
 
+.BuySectionLarge {
+    padding-left: 100px;
+}
+
+.BuySectionMedium {
+    padding-left: 20px;
+}
+
+.BuySectionSmall {
+    padding-left: 20px;
+}
+
+.BuySectionExtraSmall {
+    padding-left: 20px;
+}
+
 .Shipping {
     margin-top: 10px;
     height: 20px;
-    padding-left: 84px;
     font-size: 0.9rem;
+}
 
+.ShippingLarge {
+    padding-left: 84px;
+}
+
+.ShippingMedium {
+    padding-left: 84px;
+}
+
+.ShippingSmall {
+    padding-left: 84px;
+}
+
+.ShippingExtraSmall {
+    padding-left: 40px;
 }
 
 .Delivery {

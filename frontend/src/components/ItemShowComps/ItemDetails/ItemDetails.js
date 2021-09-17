@@ -9,6 +9,7 @@ const ItemDetails = (props) => {
     const [redirect, setRedirect] = useState("");
 
     const user = useSelector(state => state.user);
+    const screenSize = useSelector(state => state.screenSize);
 
     const dispatch = useDispatch();
 
@@ -60,7 +61,7 @@ const ItemDetails = (props) => {
         return time;
       }
 
-    const onAddToCart = (isBuyItNow) => {
+    const onAddToCart = (isBuyItNow) => { /* This should totally be switch case but I can't be bothered to rewrite it */
         if (quantity <= 0) {
             dispatch({
                 type: "flash",
@@ -108,21 +109,52 @@ const ItemDetails = (props) => {
         }
     }
 
+
     return (
-        <div className={classes.ItemDetails}>
+        <div className={
+                `${classes.ItemDetails} ${screenSize === "large" ? classes.ItemDetailsLarge :
+                screenSize === "medium" ? classes.ItemDetailsMedium : 
+                screenSize === "small" ? classes.ItemDetailsSmall : 
+                screenSize === "extraSmall" ? classes.ItemDetailsExtraSmall : 
+                null}`
+            }>
             <div className={classes.ItemName}>{props.productData.name}</div>
                 <div className={classes.Quantity}>
                     <label className={classes.QtyLabel} htmlFor="qty">Quantity:</label>
                     <input className={classes.QtyInput} type="number" min="0" defaultValue={1} id="qty" onChange={onQtyChange}/>
                 </div>
-                <div className={classes.BuySection}>
+                <div className={
+                    `${classes.BuySection} ${screenSize === "large" ? classes.BuySectionLarge :
+                    screenSize === "medium" ? classes.BuySectionMedium : 
+                    screenSize === "small" ? classes.BuySectionSmall : 
+                    screenSize === "extraSmall" ? classes.BuySectionExtraSmall : 
+                    null}`
+                }>
                     <div className={classes.Price}>
                         Price: <span className={classes.PriceNum}>${props.productData.price}</span>
                     </div>
-                    <button className={classes.BuyItNowBtn} onClick={() => {onAddToCart(true)}}>Buy It Now</button>
-                    <button className={classes.AddToCartBtn} onClick={onAddToCart}>Add to Cart</button>
+                    <button className={
+                        `${classes.BuyItNowBtn} ${screenSize === "large" ? classes.BuyItNowBtnLarge :
+                        screenSize === "medium" ? classes.BuyItNowBtnMedium : 
+                        screenSize === "small" ? classes.BuyItNowBtnSmall : 
+                        screenSize === "extraSmall" ? classes.BuyItNowBtnExtraSmall : 
+                        null}`
+                    } onClick={() => {onAddToCart(true)}}>Buy It Now</button>
+                    <button className={
+                        `${classes.AddToCartBtn} ${screenSize === "large" ? classes.AddToCartBtnLarge :
+                        screenSize === "medium" ? classes.AddToCartBtnMedium : 
+                        screenSize === "small" ? classes.AddToCartBtnSmall : 
+                        screenSize === "extraSmall" ? classes.AddToCartBtnExtraSmall : 
+                        null}`
+                    } onClick={onAddToCart}>Add to Cart</button>
                 </div>
-                <div className={classes.Shipping}>
+                <div className={
+                    `${classes.Shipping} ${screenSize === "large" ? classes.ShippingLarge :
+                    screenSize === "medium" ? classes.ShippingMedium : 
+                    screenSize === "small" ? classes.ShippingSmall : 
+                    screenSize === "extraSmall" ? classes.ShippingExtraSmall : 
+                    null}`
+                }>
                     Shipping: ${props.productData.shippingCost}
                 </div>
                 <div className={classes.Delivery}>
