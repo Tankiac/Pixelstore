@@ -1,26 +1,40 @@
 .ItemDetails {
     /*box-shadow: 5px 5px 10px #aaaaaa;*/
-    height: 415px;
-    width: 100%;
+    
+    
     
     background-color: #ffffff;
-    padding: 20px;
+    
 }
 
 .ItemDetailsLarge {
     grid-column: 2;
+    padding: 20px;
+    min-height: 415px;
+    width: 100%;
 }
 
 .ItemDetailsMedium {
     grid-column: 1;
+    padding: 20px;
+    min-height: 400px;
+    width: 600px;
+    margin: 0 auto;
 }
 
 .ItemDetailsSmall {
     grid-column: 1;
+    padding: 20px;
+    max-width: 600px;
+    min-height: 415px;
+    margin: 0 auto;
 }
 
 .ItemDetailsExtraSmall {
     grid-column: 1;
+    padding: 20px 20px 0px 20px;
+    min-height: 415px;
+    margin: 0 auto;
 }
 
 .ItemName {
@@ -144,11 +158,11 @@
 }
 
 .BuySectionMedium {
-    padding-left: 20px;
+    padding-left: 100px;
 }
 
 .BuySectionSmall {
-    padding-left: 20px;
+    padding-left: 60px;
 }
 
 .BuySectionExtraSmall {
@@ -185,12 +199,29 @@
     border-bottom: 1px solid #cccccc;
 }
 
+.DeliveryLarge {
+    padding-left: 84px;
+}
+
+.DeliveryMedium {
+    padding-left: 84px;
+}
+
+.DeliverySmall {
+    padding-left: 84px;
+}
+
+.DeliveryExtraSmall {
+    padding-left: 40px;
+    padding-bottom: 60px;
+}
+
 .DeliveryDate {
     font-weight: bold;
 }
 
 .Description {
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 20px;
     font-size: 0.9rem;
 }

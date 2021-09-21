@@ -1,9 +1,30 @@
 .TotalCard {
-    width: 100%;
     border: 1px solid #cccccc;
     height: 190px;
+}
+
+.TotalCardLarge {
+    width: 100%;
     grid-column: 2;
     grid-row: 1;
+}
+
+.TotalCardMedium {
+    width: 100%;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.TotalCardSmall {
+    width: 276px;
+    grid-column: 1;
+    margin: 0 auto;
+}
+
+.TotalCardExtraSmall {
+    width: 300px;
+    grid-column: 1;
+    margin: 0 auto;
 }
 
 .PriceContainer {

@@ -1,9 +1,29 @@
 .CartPage {
     display: grid;
-    width: 850px;
+    
     min-height: 85vh;
-    grid-template-columns: 4fr 2fr;
+    
     grid-template-rows: auto;
     margin: 50px auto;
     grid-column-gap: 20px;
+}
+
+.CartPageLarge {
+    grid-template-columns: 4fr 2fr;
+    width: 850px;
+}
+
+.CartPageMedium {
+    grid-template-columns: 4fr 2fr;
+    width: 850px;
+}
+
+.CartPageSmall {
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.CartPageExtraSmall {
+    grid-template-columns: 1fr;
+    width: 100%;
 }

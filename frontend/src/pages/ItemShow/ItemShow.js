@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { setResponsiveClassName } from "../../utility/utilityFunctions";
 
 import Flash from "../../components/Flash/Flash";
 import ItemPicture from "../../components/ItemShowComps/ItemPicture/ItemPicture";
@@ -31,13 +32,7 @@ const ItemShow = (props) => {
     }, [productid]);
 
     return productData && (
-        <div className={
-                `${classes.ItemShow} ${screenSize === "large" ? classes.ItemShowLarge :
-                screenSize === "medium" ? classes.ItemShowMedium : 
-                screenSize === "small" ? classes.ItemShowSmall : 
-                screenSize === "extraSmall" ? classes.ItemShowExtraSmall : 
-                null}`
-            }>
+        <div className={setResponsiveClassName(classes, screenSize, "ItemShow")}>
             <ItemPicture pictures={productData.pictures}/>
             <ItemDetails productData={productData}/>
             <ItemReviews reviews={productData.reviews} productid={productData._id} getProduct={getProduct}/> 

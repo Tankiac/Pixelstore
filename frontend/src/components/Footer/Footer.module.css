@@ -7,9 +7,17 @@
 
 .FooterItems {
     grid-template-rows: 100px 50px 50px 50px 50px;
+    width: 200px;
+}
+
+.FooterItemsLarge {
     margin-top: 10px;
     margin-left: 100px;
-    width: 200px;
+}
+
+.FooterItemsExtraSmall {
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 .LogoContainer {

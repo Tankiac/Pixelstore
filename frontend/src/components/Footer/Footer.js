@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
 import classes from "./Footer.module.css";
 import PixelLogo from "../../assets/images/PixelLogo.png"
 import LinkedInIcon from "../../assets/images/LinkedInIcon.png"
 
 const Footer = (props) => {
+    const screenSize = useSelector(state => state.screenSize);
+
     const [contactInfo, setContactInfo] = useState(null);
 
     const onShowContacts = () => {
@@ -27,7 +30,12 @@ const Footer = (props) => {
 
     return (
         <footer className={classes.Footer}>
-            <div className={classes.FooterItems}>
+            <div className={`${classes.FooterItems} 
+                    ${screenSize === "large" || 
+                    screenSize === "medium" || 
+                    screenSize === "small" ? classes.FooterItemsLarge : 
+                    classes.FooterItemsExtraSmall}`}>
+                        
                 <div className={classes.LogoContainer}>
                     <img src={PixelLogo} className={classes.Logo}/>
                 </div>

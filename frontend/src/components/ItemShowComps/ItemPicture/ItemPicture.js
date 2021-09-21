@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { setResponsiveClassName } from "../../../utility/utilityFunctions";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -16,13 +17,7 @@ const ItemPicture = (props) => {
       };
 
     return (
-        <div className={
-            `${classes.ItemPicture} ${screenSize === "large" ? classes.ItemPictureLarge :
-            screenSize === "medium" ? classes.ItemPictureMedium : 
-            screenSize === "small" ? classes.ItemPictureSmall : 
-            screenSize === "extraSmall" ? classes.ItemPictureExtraSmall : 
-            null}`
-        }>
+        <div className={setResponsiveClassName(classes, screenSize, "ItemPicture")}>
             <Carousel
                 swipeable={false}
                 draggable={false}

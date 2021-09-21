@@ -18,6 +18,22 @@ const ScreenSizeProvider = (props) => {
     const extraSmallBreakpoint = 450;
 
     useEffect(() => {
+        const checkScreenSizeInterval = setInterval(() => {
+            if (window.innerWidth > mediumBreakpoint) 
+        {
+                updateScreenSize("large")
+        }
+            else if (window.innerWidth < mediumBreakpoint && window.innerWidth > smallBreakpoint) 
+        {
+            updateScreenSize("medium")
+        }
+            if (window.innerWidth < smallBreakpoint && window.innerWidth > extraSmallBreakpoint) 
+        {
+            updateScreenSize("small")
+        } else if (window.innerWidth < extraSmallBreakpoint) {
+            updateScreenSize("extraSmall")
+        }
+        }, 200);
         setTimeout(() => {  // setTimeout because window.innerWidth returns wrong value without it
             if (window.innerWidth < mediumBreakpoint && window.innerWidth > smallBreakpoint) 
         {
@@ -29,7 +45,7 @@ const ScreenSizeProvider = (props) => {
         } else if (window.innerWidth < extraSmallBreakpoint) {
             updateScreenSize("extraSmall")
         }
-        }, 1);
+        }, 10);
         window.addEventListener("resize", () => {
             if (window.innerWidth < smallBreakpoint && window.innerWidth > extraSmallBreakpoint) 
         {
@@ -54,6 +70,7 @@ const ScreenSizeProvider = (props) => {
             updateScreenSize("large")
         }
         });
+        
     });
     return null;
 }

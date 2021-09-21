@@ -40,6 +40,7 @@ const SideDrawer = ( props ) => {
             <div className={attachedClasses.join(' ')} onClick={props.closed}>
                 <div className={classes.DrawerHeader}>Hello, <span className={classes.Username}>&nbsp;{username ? username : "Guest"}</span></div>
                 <nav>
+                    <DrawerItem name="Home" linkpath="/home"/>
                     <DrawerItem name="Cart" linkpath="/cart"/>
                     <DrawerItem name="Checkout" linkpath="/checkout"/> 
                     <DrawerItem name="Sign up" linkpath="/signin"/>

@@ -1,13 +1,13 @@
 .ItemShow {
     display: grid;
     grid-row-gap: 40px;
-    grid-column-gap: 20px;
     max-width: 1100px;
     margin: 100px auto;
 }
 
 .ItemShowLarge {
     grid-template-columns: 2fr 4fr;
+    grid-column-gap: 20px;
     grid-template-rows: auto;
 }
 
