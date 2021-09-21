@@ -1,4 +1,6 @@
 import React from "react";
+import { setResponsiveClassName } from "../../../utility/utilityFunctions";
+import { useSelector } from "react-redux";
 
 import PayMethod from "./PayMethod/PayMethod";
 import VisaLogo from "../../../assets/images/VisaLogo.png";
@@ -7,6 +9,8 @@ import PayPalLogo from "../../../assets/images/PayPalLogo.png";
 import classes from "./PayMethods.module.css";
 
 const PayMethods = (props) => {
+    const screenSize = useSelector(state => state.screenSize);
+
     let payMethods = [
         {img: VisaLogo},
         {img: MasterCardLogo},
@@ -15,7 +19,7 @@ const PayMethods = (props) => {
 
     return (
         <React.Fragment>
-            <div className={classes.PayMethods}>
+            <div className={setResponsiveClassName(classes, screenSize, "PayMethods")}>
                 <div className={classes.PayMethodsTitle}>Payment Methods</div>
                 <PayMethod payMethodImg={payMethods[0].img} payMethod="visa" checked={true}/>
                 <PayMethod payMethodImg={payMethods[1].img} payMethod="mastercard"/>

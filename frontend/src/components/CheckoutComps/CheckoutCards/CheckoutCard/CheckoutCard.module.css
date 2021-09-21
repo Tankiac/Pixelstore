@@ -1,15 +1,44 @@
 .CheckoutCard {
-    width: 100%;
-    height: 234px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #cccccc;
     display: grid;
-    grid-template-columns: 2fr 5fr;
-    grid-template-rows: 1fr 12fr;
+
     grid-gap: 10px;
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 1;
+}
+
+.CheckoutCardLarge {
+    height: 234px;
+    width: 100%;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 1fr 12fr;
+}
+
+.CheckoutCardMedium {
+    height: 234px;
+    width: 100%;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 1fr 12fr;
+}
+
+.CheckoutCardSmall {
+    height: 430px;
+    width: 449px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 12fr 12fr;
+}
+
+.CheckoutCardExtraSmall {
+    height: 450px;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 12fr 12fr;
 }
 
 .CardTitle {
@@ -31,6 +60,22 @@
 
 .DetailsContainer {
     padding-left: 10px;
+}
+
+.DetailsContainerLarge {
+    grid-column: 2
+}
+
+.DetailsContainerMedium {
+    grid-column: 2
+}
+
+.DetailsContainerSmall {
+    grid-column: 1
+}
+
+.DetailsContainerExtraSmall {
+    grid-column: 1
 }
 
 .ItemName {

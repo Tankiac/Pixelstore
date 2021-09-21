@@ -1,14 +1,17 @@
 import React from "react";
-
+import { useSelector } from "react-redux";
+import { setResponsiveClassName } from "../../../../utility/utilityFunctions";
 
 import classes from "./CartItem.module.css";
 
 const CartItem = (props) => {
+    const screenSize = useSelector(state => state.screenSize);
+
     return (
-        <div className={classes.CartItem}>
+        <div className={setResponsiveClassName(classes, screenSize, "CartItem")}>
             <div className={classes.CardTitle}>Review item and shipping</div>
                 <img className={classes.ItemImg} src={props.productData.pictures[0]}/>
-                <div className={classes.DetailsContainer}>
+                <div className={setResponsiveClassName(classes, screenSize, "DetailsContainer")}>
                     <div className={classes.ItemName}>{props.productData.name}</div>
                     <div className={classes.ItemPrice}>${props.productData.price}</div>
                     <div className={classes.ItemQty}>Quantity: {props.qty}</div>

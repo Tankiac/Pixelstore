@@ -1,8 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { setResponsiveClassName } from "../../../../utility/utilityFunctions";
 
 import classes from "./CheckoutCard.module.css";
 
 const CheckoutCard = (props) => {
+    const screenSize = useSelector(state => state.screenSize)
+
     const timeConverter = (offset = 0) => {
         let unix = new Date(Date.now());
         let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -13,10 +17,10 @@ const CheckoutCard = (props) => {
       }
 
     return (
-        <div className={classes.CheckoutCard}>
+        <div className={setResponsiveClassName(classes, screenSize, "CheckoutCard")}>
             <div className={classes.CardTitle}>Review item and shipping</div>
                 <img className={classes.ItemImg} src={props.productData.pictures[0]}/>
-                <div className={classes.DetailsContainer}>
+                <div className={setResponsiveClassName(classes, screenSize, "DetailsContainer")}>
                     <div className={classes.ItemName}>{props.productData.name}</div>
                     <div className={classes.ItemPrice}>${props.productData.price}</div>
                     <div className={classes.ItemQty}>Quantity: {props.qty}</div>

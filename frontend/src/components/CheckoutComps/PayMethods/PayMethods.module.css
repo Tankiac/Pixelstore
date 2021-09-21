@@ -7,6 +7,24 @@
     border-bottom: 1px solid #cccccc;
 }
 
+.PayMethodsLarge {
+    width: 100%;
+}
+
+.PayMethodsMedium {
+    width: 100%;
+}
+
+.PayMethodsSmall {
+    width: 449px;
+    margin: 0 auto;
+}
+
+.PayMethodsExtraSmall {
+    width: 300px;
+    margin: 0 auto;
+}
+
 .PayMethodsTitle {
     display: grid;
     align-content: center;

@@ -1,12 +1,30 @@
 .CheckoutCards {
     grid-column: 1;
     grid-row: 2;
+    margin-top: 20px;
 }
 
 .NoProducts {
-    width: 100%;
     height: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
     padding: 12px 10px 10px 20px;
     border: 1px solid #cccccc;
     color: #888888;
+}
+
+.NoProductsLarge {
+    width: 553px;
+}
+
+.NoProductsMedium {
+    width: 553px;
+}
+
+.NoProductsSmall {
+    width: 449px;
+}
+
+.NoProductsExtraSmall {
+    width: 300px;
 }

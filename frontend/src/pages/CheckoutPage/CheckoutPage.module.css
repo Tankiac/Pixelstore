@@ -1,10 +1,27 @@
 .CheckoutPage {
     display: grid;
-    width: 850px;
     min-height: 85vh;
-    grid-template-columns: 4fr 2fr;
     grid-template-rows: 200px auto;
     margin: 50px auto;
     grid-column-gap: 20px;
-    grid-row-gap: 20px;
+}
+
+.CheckoutPageLarge {
+    grid-template-columns: 4fr 2fr;
+    width: 850px;
+}
+
+.CheckoutPageMedium {
+    grid-template-columns: 4fr 2fr;
+    width: 850px;
+}
+
+.CheckoutPageSmall {
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+
+.CheckoutPageExtraSmall {
+    grid-template-columns: 1fr;
+    width: 100%;
 }

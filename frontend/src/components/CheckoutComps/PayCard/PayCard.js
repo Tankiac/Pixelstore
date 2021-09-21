@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import StoreDataService from "../../../services/store";
+import { setResponsiveClassName } from "../../../utility/utilityFunctions";
 
 import classes from "./PayCard.module.css";
 
 const PayCard = (props) => {
+    const screenSize = useSelector(state => state.screenSize);
     const [subtotal, setSubtotal] = useState(0);
     const [shippingTotal, setShippingTotal] = useState(0);
 
@@ -48,7 +50,7 @@ const PayCard = (props) => {
     }, [cartData]);
 
     return (
-        <div className={classes.PayCard}>
+        <div className={setResponsiveClassName(classes, screenSize, "PayCard")}>
             <div className={classes.PriceContainer}>
                 <div className={classes.SubtotalText}>Subtotal</div>
                 <div className={classes.ShippingText}>Shipping</div>
