@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router";
-import { setResponsiveClassName } from "../../../utility/utilityFunctions";
+import { setResponsiveClassName, timeConverter } from "../../../utility/utilityFunctions";
 
 import classes from "./ItemDetails.module.css";
 
@@ -22,45 +22,7 @@ const ItemDetails = (props) => {
         setRedirect(<Redirect to="/checkout"/>)
     }
 
-    const timeConverter = (offset = 0) => {
-        let unix = new Date(Date.now());
-        let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-        let months31 = ["Jan", "Mar", "May", "Jul", "Sep", "Nov"];
-        let months30 = ["Apr", "Jun", "Aug", "Oct", "Dec"]; 
-        let month = months[unix.getMonth()];
-        let date = unix.getDate();
-        if (months31.includes(month)) {
-            if (date + offset > 31) {
-                if (month === "Dec") {
-                    month = "Jan"
-                } else {
-                    month = months[months.indexOf(month) + 1]
-                }
-                date = date + offset - 31;
-            } else {
-                date += offset;
-            }
-        } else if (months30.includes(month)) {
-            if (date + offset > 30) {
-                if (month === "Dec") {
-                    month = "Jan"
-                } else {
-                    month = months[months.indexOf(month) + 1]
-                }
-                date = date + offset - 31;
-            } else {
-                date += offset;
-            }
-        } if (month === "Feb") {
-            if (date + offset > 28) {
-                    month = months[months.indexOf(month) + 1] 
-            } else {
-                date += offset;
-            }
-        }
-        let time = `${month} ${date}.`
-        return time;
-      }
+    
 
     const onAddToCart = (isBuyItNow) => { /* This should totally be switch case but I can't be bothered to rewrite it */
         if (quantity <= 0) {

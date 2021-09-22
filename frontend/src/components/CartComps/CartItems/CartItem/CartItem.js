@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { setResponsiveClassName } from "../../../../utility/utilityFunctions";
+import { setResponsiveClassName, timeConverter } from "../../../../utility/utilityFunctions";
 
 import classes from "./CartItem.module.css";
 
@@ -16,7 +16,7 @@ const CartItem = (props) => {
                     <div className={classes.ItemPrice}>${props.productData.price}</div>
                     <div className={classes.ItemQty}>Quantity: {props.qty}</div>
                     <div className={classes.ShippingTitle}>Shipping</div>
-                    <div className={classes.EstDelivery}>Estimated Delivery: May 18th - May 24th</div>
+                    <div className={classes.EstDelivery}>Estimated Delivery: {timeConverter(2)} - {timeConverter(7)}</div>
                     <div className={classes.ShippingPrice}>${props.productData.shippingCost}</div>
                 </div> 
         </div>

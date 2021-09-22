@@ -17,7 +17,7 @@ const Footer = (props) => {
                     <div className={classes.Email}>rikdervisevic@gmail.com</div>
                     <a href="">
                         <div className={classes.LinkedIn}>
-                            <span className={classes.LinkedInText}>LinkedIn</span>
+                            <a href="/" className={classes.LinkedInText}>LinkedIn</a>
                             <img src={LinkedInIcon} className={classes.LinkedInIcon}/>
                         </div>
                     </a>
@@ -40,7 +40,7 @@ const Footer = (props) => {
                     <img src={PixelLogo} className={classes.Logo}/>
                 </div>
                 <div className={`${classes.FooterButton} ${classes.About}`}>
-                    About me
+                    <a href="https://tarikdportfolio.web.app/" className={classes.AboutMeLink}>About me</a>
                 </div>
                 <div className={`${classes.FooterButton} ${classes.Contact}`} onClick={onShowContacts}>
                     Contact
