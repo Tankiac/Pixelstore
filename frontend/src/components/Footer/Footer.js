@@ -17,8 +17,10 @@ const Footer = (props) => {
                     <div className={classes.Email}>rikdervisevic@gmail.com</div>
                     <a href="">
                         <div className={classes.LinkedIn}>
-                            <a href="/" className={classes.LinkedInText}>LinkedIn</a>
-                            <img src={LinkedInIcon} className={classes.LinkedInIcon}/>
+                            <a href="https://www.linkedin.com/in/tarikdev/">
+                                <div className={classes.LinkedInText}>LinkedIn</div>
+                                <img src={LinkedInIcon} className={classes.LinkedInIcon}/>
+                            </a>
                         </div>
                     </a>
                 </React.Fragment>

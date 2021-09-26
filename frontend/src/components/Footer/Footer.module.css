@@ -69,10 +69,12 @@
 .LinkedInText {
     color: white;
     margin-left: 50px;
+    display: inline-block;
 }
 
 .LinkedInText:hover {
     color: white;
+    text-decoration: underline;
 }
 
 
