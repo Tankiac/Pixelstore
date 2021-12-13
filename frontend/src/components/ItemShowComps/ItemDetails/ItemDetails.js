@@ -70,6 +70,7 @@ const ItemDetails = (props) => {
                 }
             })
         }
+        props.productData.stock -= quantity;
     }
 
 

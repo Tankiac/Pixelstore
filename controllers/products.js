@@ -34,7 +34,10 @@ export default class ProductsController {
             for (let i = 0; i < items.length; i++) {
                 console.log(req.body);
                 console.log(items[i]);
-                await Product.findByIdAndUpdate(items[i].productData._id, { $inc: { stock: (items[i].qty * -1) } } );   
+                const product = await Product.findById(items[i].productData._id)
+                if (product.stock >= items[i].qty) {
+                    await Product.findByIdAndUpdate(items[i].productData._id, { $inc: { stock: (items[i].qty * -1) } } );
+                }
             }
             res.status(200);
         } catch (e) {
